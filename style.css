@@ -1,10 +1,58 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+
 }
-section{
-    display: flex;
+.bg-image{
+    position: relative;
+    filter: blur(10px);
     height: 100vh;
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .box{
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+}
+section .box div{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(25deg) translate3d(-75px,-50px,120px);
+}
+span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 90%;
+    display: block;
+    background: url(https://cdn.pixabay.com/photo/2020/09/19/10/39/forest-5584131_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+}
+.box div span:nth-child(1){
+    transform: rotateX(0deg) translate3d(0,7px,149px);
+}
+.box div span:nth-child(2){
+    transform: rotateY(90deg) translate3d(0,2px,-168px);
+}
+.box div span:nth-child(3){
+    transform: rotateX(90deg) translate3d(-53px,100px,200px);
 }
